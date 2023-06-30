@@ -1,0 +1,73 @@
+ERROR - 2022-11-24 21:39:39 --> получаем адрес
+ERROR - 2022-11-24 21:39:39 --> XksUcJUsZ5PiSyb59MQh1t4KTP883CGAhX
+ERROR - 2022-11-24 21:49:03 --> уведомление
+ERROR - 2022-11-24 21:49:03 --> Array
+(
+    [cryptocurrencyapi.net] => 2
+    [currency] => DASH
+    [type] => in
+    [date] => 1669315740
+    [address] => XksUcJUsZ5PiSyb59MQh1t4KTP883CGAhX
+    [amount] => 0.23529400
+    [txid] => f111d9c01df13f8b65b861607387aa81bed17fd68c8c015d0be1431c1095d042
+    [pos] => 0
+    [confirmations] => 1
+    [tag] => 1313149451
+    [sign] => b8ae82d3b6d9a0c21ff00d1e1e5c31afe1cc5921
+    [sign2] => 32b3a99d104bb525bf2f0b7446d49f686a207007
+)
+
+ERROR - 2022-11-24 21:54:31 --> уведомление
+ERROR - 2022-11-24 21:54:31 --> Array
+(
+    [currency] => DASH
+    [to] => XksUcJUsZ5PiSyb59MQh1t4KTP883CGAhX
+    [tag] => 1313149451
+    [type] => in
+    [amount] => 0.235294
+    [txid] => f111d9c01df13f8b65b861607387aa81bed17fd68c8c015d0be1431c1095d042
+)
+
+ERROR - 2022-11-24 21:54:46 --> уведомление
+ERROR - 2022-11-24 21:54:46 --> Array
+(
+    [currency] => DASH
+    [to] => XksUcJUsZ5PiSyb59MQh1t4KTP883CGAhX
+    [tag] => 1313149451
+    [type] => in
+    [amount] => 0.235294
+    [txid] => f111d9c01df13f8b65b861607387aa81bed17fd68c8c015d0be1431c1095d042
+)
+
+CRITICAL - 2022-11-24 21:55:23 --> syntax error, unexpected '=', expecting ']'
+in APPPATH/ThirdParty/tronapi/Models/TronapiModel.php on line 309.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH/ThirdParty/tronapi/Models/TronapiModel.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Tronapi\\Models\\TronapiModel')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Tronapi\\Models\\TronapiModel')
+ 4 APPPATH/ThirdParty/tronapi/Controllers/Tronapi.php(37): spl_autoload_call('Tronapi\\Models\\TronapiModel')
+ 5 SYSTEMPATH/CodeIgniter.php(889): Tronapi\Controllers\Tronapi->__construct()
+ 6 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-24 21:55:32 --> уведомление
+ERROR - 2022-11-24 21:55:32 --> Array
+(
+    [confirmations] => 2
+    [currency] => DASH
+    [to] => XksUcJUsZ5PiSyb59MQh1t4KTP883CGAhX
+    [tag] => 1313149451
+    [type] => in
+    [amount] => 0.235294
+    [txid] => f111d9c01df13f8b65b861607387aa81bed17fd68c8c015d0be1431c1095d042
+)
+
+ERROR - 2022-11-24 21:55:32 --> поступление оплаты
+ERROR - 2022-11-24 21:55:32 --> Array
+(
+    [txid] => f111d9c01df13f8b65b861607387aa81bed17fd68c8c015d0be1431c1095d042
+    [value] => 0.235294
+    [id_order] => 1313149451
+    [currency] => DASH
+)
+
+ERROR - 2022-11-24 21:55:32 --> помечаем оплаченным заказ №1313149451

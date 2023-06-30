@@ -1,0 +1,34 @@
+{
+  "tools": {
+    
+    "delimiter": {
+      "text": {
+        "type": "string",
+        "allowedTags": "i"
+      }
+    },
+
+    "paragraph": {
+      "text": {
+        "type": "string",
+        "allowedTags": "i,b,u,s,strong,ins,strike,code,pre,em,a[href]"
+      }
+    },
+    
+    "table": {
+      "header": {
+        "type": "array",
+        "data": {
+          "description": {
+            "type": "string"
+          },
+          "author": {
+            "type": "string"
+          }
+        }
+      }
+    }
+
+
+  }
+}

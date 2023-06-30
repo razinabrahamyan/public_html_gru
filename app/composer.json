@@ -1,0 +1,6 @@
+{
+    "require": {
+        "mtdowling/cron-expression": "^1.2",
+        "codex-team/editor.js": "dev-master"
+    }
+}

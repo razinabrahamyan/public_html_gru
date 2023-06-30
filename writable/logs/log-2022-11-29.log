@@ -1,0 +1,670 @@
+ERROR - 2022-11-29 11:13:31 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in /home/fqhcombi/public_html/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /home/fqhcombi/public_html/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 /home/fqhcombi/public_html/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /home/fqhcombi/public_html/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/fqhcombi/public_html/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `setting...', Array, false)
+#4 /home/fqhcombi/public_html/app/ThirdParty/panel/Models/SettingsModel.php(147): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/fqhcombi/public_html/app/ThirdParty/panel/Models/SettingsModel.php(39): Admin\Models\SettingsModel->all()
+#6 /home/fqhcombi/public_html/app/ThirdParty/telegram/Models/TgModel.php(36): Admin\Models\SettingsModel->__construct()
+#7 /home/fqhcombi/public_html/app/Controllers/BaseController.php(42): Telegram\Models\TgModel->__construct()
+#8 /home/fqhcombi/public_html/system/CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#9 /home/fqhcombi/public_html/system/CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+#10 /home/fqhcombi/public_html/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /home/fqhcombi/public_html/index.php(55): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in /home/fqhcombi/public_html/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /home/fqhcombi/public_html/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /home/fqhcombi/public_html/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/fqhcombi/public_html/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `setting...', Array, false)
+#3 /home/fqhcombi/public_html/app/ThirdParty/panel/Models/SettingsModel.php(147): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/fqhcombi/public_html/app/ThirdParty/panel/Models/SettingsModel.php(39): Admin\Models\SettingsModel->all()
+#5 /home/fqhcombi/public_html/app/ThirdParty/telegram/Models/TgModel.php(36): Admin\Models\SettingsModel->__construct()
+#6 /home/fqhcombi/public_html/app/Controllers/BaseController.php(42): Telegram\Models\TgModel->__construct()
+#7 /home/fqhcombi/public_html/system/CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#8 /home/fqhcombi/public_html/system/CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+#9 /home/fqhcombi/public_html/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/fqhcombi/public_html/index.php(55): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-11-29 11:13:31 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `settings`.*, `settings_groups`.`name` as `name_group`
+FROM `settings`
+JOIN `settings_groups` ON `settings`.`id_group` = `settings_groups`.`id`
+WHERE `settings`.`active` = :settings.active:
+AND `settings_groups`.`active` = :settings_groups.active:
+ORDER BY `settings_groups`.`priority` DESC, `settings`.`priority` DESC', [...], false)
+ 3 APPPATH/ThirdParty/panel/Models/SettingsModel.php(147): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH/ThirdParty/panel/Models/SettingsModel.php(39): Admin\Models\SettingsModel->all()
+ 5 APPPATH/ThirdParty/telegram/Models/TgModel.php(36): Admin\Models\SettingsModel->__construct()
+ 6 APPPATH/Controllers/BaseController.php(42): Telegram\Models\TgModel->__construct()
+ 7 SYSTEMPATH/CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 8 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 9 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-29 11:13:31 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in /home/fqhcombi/public_html/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /home/fqhcombi/public_html/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 /home/fqhcombi/public_html/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /home/fqhcombi/public_html/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/fqhcombi/public_html/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/fqhcombi/public_html/system/Debug/Exceptions.php(334): CodeIgniter\Database\BaseBuilder->get(1)
+#5 /home/fqhcombi/public_html/system/Debug/Exceptions.php(312): CodeIgniter\Debug\Exceptions->send_telegram_error(Array)
+#6 /home/fqhcombi/public_html/system/Debug/Exceptions.php(280): CodeIgniter\Debug\Exceptions->collectVars(Object(CodeIgniter\Database\Exceptions\DatabaseException), 500)
+#7 /home/fqhcombi/public_html/system/Debug/Exceptions.php(287): CodeIgniter\Debug\Exceptions->CodeIgniter\Debug\{closure}()
+#8 /home/fqhcombi/public_html/system/Debug/Exceptions.php(139): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Database\Exceptions\DatabaseException), 500)
+#9 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Database\Exceptions\DatabaseException))
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in /home/fqhcombi/public_html/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /home/fqhcombi/public_html/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /home/fqhcombi/public_html/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/fqhcombi/public_html/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /home/fqhcombi/public_html/system/Debug/Exceptions.php(334): CodeIgniter\Database\BaseBuilder->get(1)
+#4 /home/fqhcombi/public_html/system/Debug/Exceptions.php(312): CodeIgniter\Debug\Exceptions->send_telegram_error(Array)
+#5 /home/fqhcombi/public_html/system/Debug/Exceptions.php(280): CodeIgniter\Debug\Exceptions->collectVars(Object(CodeIgniter\Database\Exceptions\DatabaseException), 500)
+#6 /home/fqhcombi/public_html/system/Debug/Exceptions.php(287): CodeIgniter\Debug\Exceptions->CodeIgniter\Debug\{closure}()
+#7 /home/fqhcombi/public_html/system/Debug/Exceptions.php(139): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Database\Exceptions\DatabaseException), 500)
+#8 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Database\Exceptions\DatabaseException))
+#9 {main}
+CRITICAL - 2022-11-29 11:13:31 --> Uncaught CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO) in /home/fqhcombi/public_html/system/Database/BaseConnection.php:418
+Stack trace:
+#0 /home/fqhcombi/public_html/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#1 /home/fqhcombi/public_html/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 /home/fqhcombi/public_html/system/Debug/Exceptions.php(334): CodeIgniter\Database\BaseBuilder->get(1)
+#3 /home/fqhcombi/public_html/system/Debug/Exceptions.php(312): CodeIgniter\Debug\Exceptions->send_telegram_error(Array)
+#4 /home/fqhcombi/public_html/system/Debug/Exceptions.php(280): CodeIgniter\Debug\Exceptions->collectVars(Object(CodeIgniter\Database\Exceptions\DatabaseException), 500)
+#5 /home/fqhcombi/public_html/system/Debug/Exceptions.php(287): CodeIgniter\Debug\Exceptions->Co
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2022-11-29 11:13:31 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in /home/fqhcombi/public_html/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /home/fqhcombi/public_html/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 /home/fqhcombi/public_html/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /home/fqhcombi/public_html/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/fqhcombi/public_html/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/fqhcombi/public_html/system/Debug/Exceptions.php(334): CodeIgniter\Database\BaseBuilder->get(1)
+#5 /home/fqhcombi/public_html/system/Debug/Exceptions.php(312): CodeIgniter\Debug\Exceptions->send_telegram_error(Array)
+#6 /home/fqhcombi/public_html/system/Debug/Exceptions.php(280): CodeIgniter\Debug\Exceptions->collectVars(Object(ErrorException), 500)
+#7 /home/fqhcombi/public_html/system/Debug/Exceptions.php(287): CodeIgniter\Debug\Exceptions->CodeIgniter\Debug\{closure}()
+#8 /home/fqhcombi/public_html/system/Debug/Exceptions.php(139): CodeIgniter\Debug\Exceptions->render(Object(ErrorException), 500)
+#9 /home/fqhcombi/public_html/system/Debug/Exceptions.php(213): CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#10 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in /home/fqhcombi/public_html/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /home/fqhcombi/public_html/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /home/fqhcombi/public_html/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/fqhcombi/public_html/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /home/fqhcombi/public_html/system/Debug/Exceptions.php(334): CodeIgniter\Database\BaseBuilder->get(1)
+#4 /home/fqhcombi/public_html/system/Debug/Exceptions.php(312): CodeIgniter\Debug\Exceptions->send_telegram_error(Array)
+#5 /home/fqhcombi/public_html/system/Debug/Exceptions.php(280): CodeIgniter\Debug\Exceptions->collectVars(Object(ErrorException), 500)
+#6 /home/fqhcombi/public_html/system/Debug/Exceptions.php(287): CodeIgniter\Debug\Exceptions->CodeIgniter\Debug\{closure}()
+#7 /home/fqhcombi/public_html/system/Debug/Exceptions.php(139): CodeIgniter\Debug\Exceptions->render(Object(ErrorException), 500)
+#8 /home/fqhcombi/public_html/system/Debug/Exceptions.php(213): CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#9 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#10 {main}
+ERROR - 2022-11-29 11:13:39 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in /home/fqhcombi/public_html/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /home/fqhcombi/public_html/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 /home/fqhcombi/public_html/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /home/fqhcombi/public_html/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/fqhcombi/public_html/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `setting...', Array, false)
+#4 /home/fqhcombi/public_html/app/ThirdParty/panel/Models/SettingsModel.php(147): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/fqhcombi/public_html/app/ThirdParty/panel/Models/SettingsModel.php(39): Admin\Models\SettingsModel->all()
+#6 /home/fqhcombi/public_html/app/ThirdParty/telegram/Models/TgModel.php(36): Admin\Models\SettingsModel->__construct()
+#7 /home/fqhcombi/public_html/app/Controllers/BaseController.php(42): Telegram\Models\TgModel->__construct()
+#8 /home/fqhcombi/public_html/system/CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#9 /home/fqhcombi/public_html/system/CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+#10 /home/fqhcombi/public_html/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /home/fqhcombi/public_html/index.php(55): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in /home/fqhcombi/public_html/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /home/fqhcombi/public_html/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /home/fqhcombi/public_html/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/fqhcombi/public_html/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `setting...', Array, false)
+#3 /home/fqhcombi/public_html/app/ThirdParty/panel/Models/SettingsModel.php(147): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/fqhcombi/public_html/app/ThirdParty/panel/Models/SettingsModel.php(39): Admin\Models\SettingsModel->all()
+#5 /home/fqhcombi/public_html/app/ThirdParty/telegram/Models/TgModel.php(36): Admin\Models\SettingsModel->__construct()
+#6 /home/fqhcombi/public_html/app/Controllers/BaseController.php(42): Telegram\Models\TgModel->__construct()
+#7 /home/fqhcombi/public_html/system/CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#8 /home/fqhcombi/public_html/system/CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+#9 /home/fqhcombi/public_html/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/fqhcombi/public_html/index.php(55): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-11-29 11:13:39 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `settings`.*, `settings_groups`.`name` as `name_group`
+FROM `settings`
+JOIN `settings_groups` ON `settings`.`id_group` = `settings_groups`.`id`
+WHERE `settings`.`active` = :settings.active:
+AND `settings_groups`.`active` = :settings_groups.active:
+ORDER BY `settings_groups`.`priority` DESC, `settings`.`priority` DESC', [...], false)
+ 3 APPPATH/ThirdParty/panel/Models/SettingsModel.php(147): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH/ThirdParty/panel/Models/SettingsModel.php(39): Admin\Models\SettingsModel->all()
+ 5 APPPATH/ThirdParty/telegram/Models/TgModel.php(36): Admin\Models\SettingsModel->__construct()
+ 6 APPPATH/Controllers/BaseController.php(42): Telegram\Models\TgModel->__construct()
+ 7 SYSTEMPATH/CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 8 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 9 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-29 11:13:39 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in /home/fqhcombi/public_html/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /home/fqhcombi/public_html/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 /home/fqhcombi/public_html/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /home/fqhcombi/public_html/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/fqhcombi/public_html/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/fqhcombi/public_html/system/Debug/Exceptions.php(334): CodeIgniter\Database\BaseBuilder->get(1)
+#5 /home/fqhcombi/public_html/system/Debug/Exceptions.php(312): CodeIgniter\Debug\Exceptions->send_telegram_error(Array)
+#6 /home/fqhcombi/public_html/system/Debug/Exceptions.php(280): CodeIgniter\Debug\Exceptions->collectVars(Object(CodeIgniter\Database\Exceptions\DatabaseException), 500)
+#7 /home/fqhcombi/public_html/system/Debug/Exceptions.php(287): CodeIgniter\Debug\Exceptions->CodeIgniter\Debug\{closure}()
+#8 /home/fqhcombi/public_html/system/Debug/Exceptions.php(139): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Database\Exceptions\DatabaseException), 500)
+#9 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Database\Exceptions\DatabaseException))
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in /home/fqhcombi/public_html/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /home/fqhcombi/public_html/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /home/fqhcombi/public_html/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/fqhcombi/public_html/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /home/fqhcombi/public_html/system/Debug/Exceptions.php(334): CodeIgniter\Database\BaseBuilder->get(1)
+#4 /home/fqhcombi/public_html/system/Debug/Exceptions.php(312): CodeIgniter\Debug\Exceptions->send_telegram_error(Array)
+#5 /home/fqhcombi/public_html/system/Debug/Exceptions.php(280): CodeIgniter\Debug\Exceptions->collectVars(Object(CodeIgniter\Database\Exceptions\DatabaseException), 500)
+#6 /home/fqhcombi/public_html/system/Debug/Exceptions.php(287): CodeIgniter\Debug\Exceptions->CodeIgniter\Debug\{closure}()
+#7 /home/fqhcombi/public_html/system/Debug/Exceptions.php(139): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Database\Exceptions\DatabaseException), 500)
+#8 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Database\Exceptions\DatabaseException))
+#9 {main}
+CRITICAL - 2022-11-29 11:13:39 --> Uncaught CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO) in /home/fqhcombi/public_html/system/Database/BaseConnection.php:418
+Stack trace:
+#0 /home/fqhcombi/public_html/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#1 /home/fqhcombi/public_html/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 /home/fqhcombi/public_html/system/Debug/Exceptions.php(334): CodeIgniter\Database\BaseBuilder->get(1)
+#3 /home/fqhcombi/public_html/system/Debug/Exceptions.php(312): CodeIgniter\Debug\Exceptions->send_telegram_error(Array)
+#4 /home/fqhcombi/public_html/system/Debug/Exceptions.php(280): CodeIgniter\Debug\Exceptions->collectVars(Object(CodeIgniter\Database\Exceptions\DatabaseException), 500)
+#5 /home/fqhcombi/public_html/system/Debug/Exceptions.php(287): CodeIgniter\Debug\Exceptions->Co
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2022-11-29 11:13:39 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in /home/fqhcombi/public_html/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /home/fqhcombi/public_html/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 /home/fqhcombi/public_html/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /home/fqhcombi/public_html/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/fqhcombi/public_html/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/fqhcombi/public_html/system/Debug/Exceptions.php(334): CodeIgniter\Database\BaseBuilder->get(1)
+#5 /home/fqhcombi/public_html/system/Debug/Exceptions.php(312): CodeIgniter\Debug\Exceptions->send_telegram_error(Array)
+#6 /home/fqhcombi/public_html/system/Debug/Exceptions.php(280): CodeIgniter\Debug\Exceptions->collectVars(Object(ErrorException), 500)
+#7 /home/fqhcombi/public_html/system/Debug/Exceptions.php(287): CodeIgniter\Debug\Exceptions->CodeIgniter\Debug\{closure}()
+#8 /home/fqhcombi/public_html/system/Debug/Exceptions.php(139): CodeIgniter\Debug\Exceptions->render(Object(ErrorException), 500)
+#9 /home/fqhcombi/public_html/system/Debug/Exceptions.php(213): CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#10 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in /home/fqhcombi/public_html/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /home/fqhcombi/public_html/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /home/fqhcombi/public_html/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/fqhcombi/public_html/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /home/fqhcombi/public_html/system/Debug/Exceptions.php(334): CodeIgniter\Database\BaseBuilder->get(1)
+#4 /home/fqhcombi/public_html/system/Debug/Exceptions.php(312): CodeIgniter\Debug\Exceptions->send_telegram_error(Array)
+#5 /home/fqhcombi/public_html/system/Debug/Exceptions.php(280): CodeIgniter\Debug\Exceptions->collectVars(Object(ErrorException), 500)
+#6 /home/fqhcombi/public_html/system/Debug/Exceptions.php(287): CodeIgniter\Debug\Exceptions->CodeIgniter\Debug\{closure}()
+#7 /home/fqhcombi/public_html/system/Debug/Exceptions.php(139): CodeIgniter\Debug\Exceptions->render(Object(ErrorException), 500)
+#8 /home/fqhcombi/public_html/system/Debug/Exceptions.php(213): CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#9 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#10 {main}
+ERROR - 2022-11-29 12:07:25 --> 200 Telegram API setWebHook 
+ERROR - 2022-11-29 12:07:25 --> Array
+(
+    [url] => https://thecoffeestorecompany.com/telegram/hook
+)
+
+ERROR - 2022-11-29 12:07:52 --> 200 Telegram API setWebHook 
+ERROR - 2022-11-29 12:07:52 --> Array
+(
+    [url] => https://thecoffeestorecompany.com/telegram/hook
+)
+
+ERROR - 2022-11-29 12:07:55 --> 200 Telegram API setWebHook 
+ERROR - 2022-11-29 12:07:55 --> Array
+(
+    [url] => https://thecoffeestorecompany.com/telegram/hook
+)
+
+ERROR - 2022-11-29 12:08:09 --> 200 Telegram API setWebHook 
+ERROR - 2022-11-29 12:08:09 --> Array
+(
+    [url] => https://thecoffeestorecompany.com/telegram/hook
+)
+
+ERROR - 2022-11-29 12:08:12 --> 200 Telegram API setWebHook 
+ERROR - 2022-11-29 12:08:12 --> Array
+(
+    [url] => https://thecoffeestorecompany.com/telegram/hook
+)
+
+ERROR - 2022-11-29 15:22:59 --> 400 Telegram API editMessageReplyMarkup 
+ERROR - 2022-11-29 15:22:59 --> Array
+(
+    [reply_markup] => {"inline_keyboard":[[{"text":"\u041a\u0443\u043f\u0438\u0442\u044c\u00a0\u2795","callback_data":"\/cart_add 8 1  0 "}],[{"text":"\u041a\u043e\u0440\u0437\u0438\u043d\u0430\u00a0\ud83d\udc5c","callback_data":"\/cart"}]]}
+    [parse_mode] => HTML
+    [chat_id] => 5134978260
+    [message_id] => 637
+)
+
+ERROR - 2022-11-29 15:23:02 --> 400 Telegram API editMessageReplyMarkup 
+ERROR - 2022-11-29 15:23:02 --> Array
+(
+    [reply_markup] => {"inline_keyboard":[[{"text":"\u041a\u0443\u043f\u0438\u0442\u044c\u00a0\u2795","callback_data":"\/cart_add 7 1 1 0 "}],[{"text":"\u041d\u0430\u0437\u0430\u0434\u00a0\u21a9\ufe0f","callback_data":"\/start_order 0 delete"},{"text":"\ud83c\udfe0\u00a0 \u0413\u043b\u0430\u0432\u043d\u043e\u0435 \u043c\u0435\u043d\u044e","callback_data":"\/start"}],[{"text":"\u041a\u043e\u0440\u0437\u0438\u043d\u0430\u00a0\ud83d\udc5c","callback_data":"\/cart"}]]}
+    [parse_mode] => HTML
+    [chat_id] => 5134978260
+    [message_id] => 638
+)
+
+ERROR - 2022-11-29 15:23:12 --> cart_delele
+ERROR - 2022-11-29 15:23:12 --> 58
+ERROR - 2022-11-29 15:24:03 --> получаем адрес
+ERROR - 2022-11-29 15:24:03 --> LZUN9YA1qoDzKthBW8BiC2iwnnBoGPEGbm
+ERROR - 2022-11-29 15:35:15 --> уведомление
+ERROR - 2022-11-29 15:35:15 --> Array
+(
+    [cryptocurrencyapi.net] => 2
+    [currency] => LTC
+    [type] => in
+    [date] => 1669725314
+    [address] => LZUN9YA1qoDzKthBW8BiC2iwnnBoGPEGbm
+    [amount] => 0.13020800
+    [txid] => 682d1b6b903639aaae9678ac1f258ce71869f08b0a36d15a68ccc6866a5996b2
+    [pos] => 0
+    [confirmations] => 1
+    [tag] => 2146045238
+    [sign] => 458d7762907a236498c257ea22fca1e5bce050e7
+    [sign2] => 273103a8d62eb23a16f5561e1ed3663437241aaf
+)
+
+ERROR - 2022-11-29 15:35:15 --> поступление оплаты
+ERROR - 2022-11-29 15:35:15 --> Array
+(
+    [txid] => 682d1b6b903639aaae9678ac1f258ce71869f08b0a36d15a68ccc6866a5996b2
+    [value] => 0.130208
+    [id_order] => 2146045238
+    [currency] => LTC
+)
+
+ERROR - 2022-11-29 15:35:15 --> помечаем оплаченным заказ №2146045238
+ERROR - 2022-11-29 15:45:17 --> уведомление
+ERROR - 2022-11-29 15:45:17 --> Array
+(
+    [cryptocurrencyapi.net] => 2
+    [currency] => LTC
+    [type] => in
+    [date] => 1669725314
+    [address] => LZUN9YA1qoDzKthBW8BiC2iwnnBoGPEGbm
+    [amount] => 0.13020800
+    [txid] => 682d1b6b903639aaae9678ac1f258ce71869f08b0a36d15a68ccc6866a5996b2
+    [pos] => 0
+    [confirmations] => 6
+    [tag] => 2146045238
+    [transferid] => 68781
+    [sign] => 71234223f5c9fbc135f143cdeb49ade693a32ba9
+    [sign2] => 524138bb756f51f7f586b6a9c9f350790c60c79d
+)
+
+ERROR - 2022-11-29 15:45:17 --> поступление оплаты
+ERROR - 2022-11-29 15:45:17 --> Array
+(
+    [txid] => 682d1b6b903639aaae9678ac1f258ce71869f08b0a36d15a68ccc6866a5996b2
+    [value] => 0.130208
+    [id_order] => 2146045238
+    [currency] => LTC
+)
+
+ERROR - 2022-11-29 15:45:17 --> Заказ уже оплачен №2146045238
+ERROR - 2022-11-29 18:20:50 --> 400 Telegram API editMessageReplyMarkup 
+ERROR - 2022-11-29 18:20:50 --> Array
+(
+    [reply_markup] => {"inline_keyboard":[[{"text":"\u041a\u0443\u043f\u0438\u0442\u044c\u00a0\u2795","callback_data":"\/cart_add 8 1  0 "}],[{"text":"\u041a\u043e\u0440\u0437\u0438\u043d\u0430\u00a0\ud83d\udc5c","callback_data":"\/cart"}]]}
+    [parse_mode] => HTML
+    [chat_id] => 5134978260
+    [message_id] => 663
+)
+
+ERROR - 2022-11-29 18:20:51 --> 400 Telegram API editMessageReplyMarkup 
+ERROR - 2022-11-29 18:20:51 --> Array
+(
+    [reply_markup] => {"inline_keyboard":[[{"text":"\u041a\u0443\u043f\u0438\u0442\u044c\u00a0\u2795","callback_data":"\/cart_add 7 1 1 0 "}],[{"text":"\u041d\u0430\u0437\u0430\u0434\u00a0\u21a9\ufe0f","callback_data":"\/start_order 0 delete"},{"text":"\ud83c\udfe0\u00a0 \u0413\u043b\u0430\u0432\u043d\u043e\u0435 \u043c\u0435\u043d\u044e","callback_data":"\/start"}],[{"text":"\u041a\u043e\u0440\u0437\u0438\u043d\u0430\u00a0\ud83d\udc5c","callback_data":"\/cart"}]]}
+    [parse_mode] => HTML
+    [chat_id] => 5134978260
+    [message_id] => 664
+)
+
+ERROR - 2022-11-29 18:20:53 --> 400 Telegram API editMessageReplyMarkup 
+ERROR - 2022-11-29 18:20:53 --> Array
+(
+    [reply_markup] => {"inline_keyboard":[[{"text":"\u041a\u0443\u043f\u0438\u0442\u044c\u00a0\u2795","callback_data":"\/cart_add 8 1  0 "}],[{"text":"\u041a\u043e\u0440\u0437\u0438\u043d\u0430\u00a0\ud83d\udc5c","callback_data":"\/cart"}]]}
+    [parse_mode] => HTML
+    [chat_id] => 5134978260
+    [message_id] => 663
+)
+
+ERROR - 2022-11-29 18:21:07 --> cart_delele
+ERROR - 2022-11-29 18:21:07 --> 59
+ERROR - 2022-11-29 18:21:13 --> cart_delele
+ERROR - 2022-11-29 18:21:13 --> 61
+ERROR - 2022-11-29 18:22:03 --> получаем адрес
+ERROR - 2022-11-29 18:22:03 --> XkkHhJKaojVNkS5FkjGhx6Z7Jf8rFwQ42T
+ERROR - 2022-11-29 18:25:04 --> уведомление
+ERROR - 2022-11-29 18:25:04 --> Array
+(
+    [cryptocurrencyapi.net] => 2
+    [currency] => DASH
+    [type] => in
+    [date] => 1669735502
+    [address] => XkkHhJKaojVNkS5FkjGhx6Z7Jf8rFwQ42T
+    [amount] => 0.23775600
+    [txid] => 62f742ac673ce642906906d128b3fc7425ae576a126838016c3552d412672296
+    [pos] => 0
+    [confirmations] => 1
+    [tag] => 189930407
+    [sign] => 759628ee932f8a357e36b5137b6738071f7e693a
+    [sign2] => c0b987c43885008f81b7510acc2e083e969277b6
+)
+
+ERROR - 2022-11-29 18:25:04 --> поступление оплаты
+ERROR - 2022-11-29 18:25:04 --> Array
+(
+    [txid] => 62f742ac673ce642906906d128b3fc7425ae576a126838016c3552d412672296
+    [value] => 0.237756
+    [id_order] => 189930407
+    [currency] => DASH
+)
+
+ERROR - 2022-11-29 18:25:04 --> помечаем оплаченным заказ №189930407
+ERROR - 2022-11-29 18:28:36 --> 400 Telegram API editMessageReplyMarkup 
+ERROR - 2022-11-29 18:28:36 --> Array
+(
+    [reply_markup] => {"inline_keyboard":[[{"text":"\u041a\u0443\u043f\u0438\u0442\u044c\u00a0\u2795","callback_data":"\/cart_add 7 1 1 0 "}],[{"text":"\u041d\u0430\u0437\u0430\u0434\u00a0\u21a9\ufe0f","callback_data":"\/start_order 0 delete"},{"text":"\ud83c\udfe0\u00a0 \u0413\u043b\u0430\u0432\u043d\u043e\u0435 \u043c\u0435\u043d\u044e","callback_data":"\/start"}],[{"text":"\u041a\u043e\u0440\u0437\u0438\u043d\u0430\u00a0\ud83d\udc5c","callback_data":"\/cart"}]]}
+    [parse_mode] => HTML
+    [chat_id] => 5134978260
+    [message_id] => 684
+)
+
+ERROR - 2022-11-29 18:28:56 --> 400 Telegram API editMessageReplyMarkup 
+ERROR - 2022-11-29 18:28:56 --> Array
+(
+    [reply_markup] => {"inline_keyboard":[[{"text":"\u041a\u0443\u043f\u0438\u0442\u044c\u00a0\u2795","callback_data":"\/cart_add 7 1 1 0 "}],[{"text":"\u041d\u0430\u0437\u0430\u0434\u00a0\u21a9\ufe0f","callback_data":"\/start_order 0 delete"},{"text":"\ud83c\udfe0\u00a0 \u0413\u043b\u0430\u0432\u043d\u043e\u0435 \u043c\u0435\u043d\u044e","callback_data":"\/start"}],[{"text":"\u041a\u043e\u0440\u0437\u0438\u043d\u0430\u00a0\ud83d\udc5c","callback_data":"\/cart"}]]}
+    [parse_mode] => HTML
+    [chat_id] => 5134978260
+    [message_id] => 684
+)
+
+ERROR - 2022-11-29 18:28:59 --> cart_delele
+ERROR - 2022-11-29 18:28:59 --> 62
+ERROR - 2022-11-29 18:29:02 --> cart_delele
+ERROR - 2022-11-29 18:29:02 --> 63
+ERROR - 2022-11-29 18:29:07 --> 400 Telegram API editMessageReplyMarkup 
+ERROR - 2022-11-29 18:29:07 --> Array
+(
+    [reply_markup] => {"inline_keyboard":[[{"text":"\u041a\u0443\u043f\u0438\u0442\u044c\u00a0\u2795","callback_data":"\/cart_add 7 1 1 0 "}],[{"text":"\u041d\u0430\u0437\u0430\u0434\u00a0\u21a9\ufe0f","callback_data":"\/start_order 0 delete"},{"text":"\ud83c\udfe0\u00a0 \u0413\u043b\u0430\u0432\u043d\u043e\u0435 \u043c\u0435\u043d\u044e","callback_data":"\/start"}],[{"text":"\u041a\u043e\u0440\u0437\u0438\u043d\u0430\u00a0\ud83d\udc5c","callback_data":"\/cart"}]]}
+    [parse_mode] => HTML
+    [chat_id] => 5134978260
+    [message_id] => 684
+)
+
+ERROR - 2022-11-29 18:29:37 --> получаем адрес
+ERROR - 2022-11-29 18:29:37 --> Xq14ybf2NVRfT5yS2MABGN6AajX837XUh7
+ERROR - 2022-11-29 18:29:40 --> уведомление
+ERROR - 2022-11-29 18:29:40 --> Array
+(
+    [cryptocurrencyapi.net] => 2
+    [currency] => DASH
+    [type] => in
+    [date] => 1669735502
+    [address] => XkkHhJKaojVNkS5FkjGhx6Z7Jf8rFwQ42T
+    [amount] => 0.23775600
+    [txid] => 62f742ac673ce642906906d128b3fc7425ae576a126838016c3552d412672296
+    [pos] => 0
+    [confirmations] => 6
+    [tag] => 189930407
+    [transferid] => 15322
+    [sign] => a07093a7f05eb1079fe7cb66cc20df671d5dacbf
+    [sign2] => 17340e8b6b7b28a66d91ddc4eeb202429cb9d044
+)
+
+ERROR - 2022-11-29 18:29:40 --> поступление оплаты
+ERROR - 2022-11-29 18:29:40 --> Array
+(
+    [txid] => 62f742ac673ce642906906d128b3fc7425ae576a126838016c3552d412672296
+    [value] => 0.237756
+    [id_order] => 189930407
+    [currency] => DASH
+)
+
+ERROR - 2022-11-29 18:29:40 --> Заказ уже оплачен №189930407
+ERROR - 2022-11-29 18:31:09 --> уведомление
+ERROR - 2022-11-29 18:31:09 --> Array
+(
+    [cryptocurrencyapi.net] => 2
+    [currency] => DASH
+    [type] => in
+    [date] => 1669735867
+    [address] => Xq14ybf2NVRfT5yS2MABGN6AajX837XUh7
+    [amount] => 0.23775600
+    [txid] => d83af8a0631306e1ebfa82dfbf144eeafb09990ea48b7e0f2362b677fbafbf99
+    [pos] => 0
+    [confirmations] => 1
+    [tag] => 1896912300
+    [sign] => baa4b32112026312a071d8d3cbb8ea6fe47095eb
+    [sign2] => bc60c3c4e33d6631c6de23a9e3311cfb484785b5
+)
+
+ERROR - 2022-11-29 18:31:09 --> поступление оплаты
+ERROR - 2022-11-29 18:31:09 --> Array
+(
+    [txid] => d83af8a0631306e1ebfa82dfbf144eeafb09990ea48b7e0f2362b677fbafbf99
+    [value] => 0.237756
+    [id_order] => 1896912300
+    [currency] => DASH
+)
+
+ERROR - 2022-11-29 18:31:09 --> помечаем оплаченным заказ №1896912300
+CRITICAL - 2022-11-29 18:35:29 --> Trying to access array offset on value of type null
+in APPPATH/ThirdParty/products/Controllers/Products.php on line 447.
+ 1 APPPATH/ThirdParty/products/Controllers/Products.php(447): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH/ThirdParty/products/Controllers/Products.php', 447, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(927): Products\Controllers\Products->delete_item(3)
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(Products\Controllers\Products))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-29 18:39:47 --> уведомление
+ERROR - 2022-11-29 18:39:47 --> Array
+(
+    [cryptocurrencyapi.net] => 2
+    [currency] => DASH
+    [type] => in
+    [date] => 1669735867
+    [address] => Xq14ybf2NVRfT5yS2MABGN6AajX837XUh7
+    [amount] => 0.23775600
+    [txid] => d83af8a0631306e1ebfa82dfbf144eeafb09990ea48b7e0f2362b677fbafbf99
+    [pos] => 0
+    [confirmations] => 6
+    [tag] => 1896912300
+    [transferid] => 15323
+    [sign] => 37a56b82e15ac3a5703e07cfa13a1d7cee19cd32
+    [sign2] => ed880920f1e6a233d6c57cbc3efeacd591a9fe0c
+)
+
+ERROR - 2022-11-29 18:39:47 --> поступление оплаты
+ERROR - 2022-11-29 18:39:47 --> Array
+(
+    [txid] => d83af8a0631306e1ebfa82dfbf144eeafb09990ea48b7e0f2362b677fbafbf99
+    [value] => 0.237756
+    [id_order] => 1896912300
+    [currency] => DASH
+)
+
+ERROR - 2022-11-29 18:39:47 --> Заказ уже оплачен №1896912300
+ERROR - 2022-11-29 18:42:37 --> 400 Telegram API editMessageReplyMarkup 
+ERROR - 2022-11-29 18:42:37 --> Array
+(
+    [reply_markup] => {"inline_keyboard":[[{"text":"\u041a\u0443\u043f\u0438\u0442\u044c\u00a0\u2795","callback_data":"\/cart_add 7 1 1 0 "}],[{"text":"\u041d\u0430\u0437\u0430\u0434\u00a0\u21a9\ufe0f","callback_data":"\/start_order 0 delete"},{"text":"\ud83c\udfe0\u00a0 \u0413\u043b\u0430\u0432\u043d\u043e\u0435 \u043c\u0435\u043d\u044e","callback_data":"\/start"}],[{"text":"\u041a\u043e\u0440\u0437\u0438\u043d\u0430\u00a0\ud83d\udc5c","callback_data":"\/cart"}]]}
+    [parse_mode] => HTML
+    [chat_id] => 5134978260
+    [message_id] => 705
+)
+
+ERROR - 2022-11-29 18:47:00 --> 400 Telegram API editMessageReplyMarkup 
+ERROR - 2022-11-29 18:47:00 --> Array
+(
+    [reply_markup] => {"inline_keyboard":[[{"text":"\u041a\u0443\u043f\u0438\u0442\u044c\u00a0\u2795","callback_data":"\/cart_add 7 1 1 0 "}],[{"text":"\u041d\u0430\u0437\u0430\u0434\u00a0\u21a9\ufe0f","callback_data":"\/start_order 0 delete"},{"text":"\ud83c\udfe0\u00a0 \u0413\u043b\u0430\u0432\u043d\u043e\u0435 \u043c\u0435\u043d\u044e","callback_data":"\/start"}],[{"text":"\u041a\u043e\u0440\u0437\u0438\u043d\u0430\u00a0\ud83d\udc5c","callback_data":"\/cart"}]]}
+    [parse_mode] => HTML
+    [chat_id] => 5134978260
+    [message_id] => 705
+)
+
+ERROR - 2022-11-29 18:47:59 --> cart_delele
+ERROR - 2022-11-29 18:47:59 --> 65
+ERROR - 2022-11-29 18:48:42 --> получаем адрес
+ERROR - 2022-11-29 18:48:42 --> XhF14MhoaeumznKuzK9d2u7GpvDY3uABBd
+ERROR - 2022-11-29 18:54:45 --> уведомление
+ERROR - 2022-11-29 18:54:45 --> Array
+(
+    [cryptocurrencyapi.net] => 2
+    [currency] => DASH
+    [type] => in
+    [date] => 1669737282
+    [address] => XhF14MhoaeumznKuzK9d2u7GpvDY3uABBd
+    [amount] => 0.23435700
+    [txid] => 82f0358dfbb916ef625a4f95dd9a4680f8f67b6d043e892de9e0ac96e36ccaae
+    [pos] => 0
+    [confirmations] => 1
+    [tag] => 974238268
+    [sign] => b2c7cdf35623c8ea9178e5676bdc522b337d2b2a
+    [sign2] => d69c9a3113a9bdda23b1ed19e18fc8f0a26e4cea
+)
+
+ERROR - 2022-11-29 18:54:45 --> поступление оплаты
+ERROR - 2022-11-29 18:54:45 --> Array
+(
+    [txid] => 82f0358dfbb916ef625a4f95dd9a4680f8f67b6d043e892de9e0ac96e36ccaae
+    [value] => 0.234357
+    [id_order] => 974238268
+    [currency] => DASH
+)
+
+ERROR - 2022-11-29 18:54:45 --> помечаем оплаченным заказ №974238268
+ERROR - 2022-11-29 19:09:46 --> уведомление
+ERROR - 2022-11-29 19:09:46 --> Array
+(
+    [cryptocurrencyapi.net] => 2
+    [currency] => DASH
+    [type] => in
+    [date] => 1669737282
+    [address] => XhF14MhoaeumznKuzK9d2u7GpvDY3uABBd
+    [amount] => 0.23435700
+    [txid] => 82f0358dfbb916ef625a4f95dd9a4680f8f67b6d043e892de9e0ac96e36ccaae
+    [pos] => 0
+    [confirmations] => 6
+    [tag] => 974238268
+    [transferid] => 15324
+    [sign] => d8e713dab3ffd49bed1cf685e5d6f67d091bb189
+    [sign2] => c9aa5a2ca5d1442badd2147d9ea9f44a5b0d5315
+)
+
+ERROR - 2022-11-29 19:09:46 --> поступление оплаты
+ERROR - 2022-11-29 19:09:46 --> Array
+(
+    [txid] => 82f0358dfbb916ef625a4f95dd9a4680f8f67b6d043e892de9e0ac96e36ccaae
+    [value] => 0.234357
+    [id_order] => 974238268
+    [currency] => DASH
+)
+
+ERROR - 2022-11-29 19:09:46 --> Заказ уже оплачен №974238268
+ERROR - 2022-11-29 21:02:38 --> 400 Telegram API editMessageReplyMarkup 
+ERROR - 2022-11-29 21:02:38 --> Array
+(
+    [reply_markup] => {"inline_keyboard":[[{"text":"\u041a\u0443\u043f\u0438\u0442\u044c\u00a0\u2795","callback_data":"\/cart_add 7 1 1 0 "}],[{"text":"\u041d\u0430\u0437\u0430\u0434\u00a0\u21a9\ufe0f","callback_data":"\/start_order 0 delete"},{"text":"\ud83c\udfe0\u00a0 \u0413\u043b\u0430\u0432\u043d\u043e\u0435 \u043c\u0435\u043d\u044e","callback_data":"\/start"}],[{"text":"\u041a\u043e\u0440\u0437\u0438\u043d\u0430\u00a0\ud83d\udc5c","callback_data":"\/cart"}]]}
+    [parse_mode] => HTML
+    [chat_id] => 5134978260
+    [message_id] => 730
+)
+
+ERROR - 2022-11-29 21:04:51 --> cart_delele
+ERROR - 2022-11-29 21:04:51 --> 67
+ERROR - 2022-11-29 21:05:05 --> 400 Telegram API editMessageReplyMarkup 
+ERROR - 2022-11-29 21:05:05 --> Array
+(
+    [reply_markup] => {"inline_keyboard":[[{"text":"\u041a\u0443\u043f\u0438\u0442\u044c\u00a0\u2795","callback_data":"\/cart_add 7 1 1 0 "}],[{"text":"\u041d\u0430\u0437\u0430\u0434\u00a0\u21a9\ufe0f","callback_data":"\/start_order 0 delete"},{"text":"\ud83c\udfe0\u00a0 \u0413\u043b\u0430\u0432\u043d\u043e\u0435 \u043c\u0435\u043d\u044e","callback_data":"\/start"}],[{"text":"\u041a\u043e\u0440\u0437\u0438\u043d\u0430\u00a0\ud83d\udc5c","callback_data":"\/cart"}]]}
+    [parse_mode] => HTML
+    [chat_id] => 5134978260
+    [message_id] => 740
+)
+
+ERROR - 2022-11-29 21:05:51 --> получаем адрес
+ERROR - 2022-11-29 21:05:51 --> XwVTiTLGvrF7cHkxZAWKryks1DswiiVXoC
+ERROR - 2022-11-29 21:41:15 --> уведомление
+ERROR - 2022-11-29 21:41:15 --> Array
+(
+    [cryptocurrencyapi.net] => 2
+    [currency] => DASH
+    [type] => in
+    [date] => 1669747273
+    [address] => XwVTiTLGvrF7cHkxZAWKryks1DswiiVXoC
+    [amount] => 0.23408200
+    [txid] => 9541d6566e8a08ed3d5394cabe17e7288db09487b1318838826bbef7586cfbd7
+    [pos] => 0
+    [confirmations] => 1
+    [tag] => 1266569849
+    [sign] => 36827ed26f9d1639167eac96b2cda27c32cc6a7c
+    [sign2] => 9fee4d4ab83de40e4ec3db2fb32c956557d06012
+)
+
+ERROR - 2022-11-29 21:41:15 --> поступление оплаты
+ERROR - 2022-11-29 21:41:15 --> Array
+(
+    [txid] => 9541d6566e8a08ed3d5394cabe17e7288db09487b1318838826bbef7586cfbd7
+    [value] => 0.234082
+    [id_order] => 1266569849
+    [currency] => DASH
+)
+
+ERROR - 2022-11-29 21:41:15 --> Заказ уже оплачен №1266569849
+ERROR - 2022-11-29 21:50:16 --> уведомление
+ERROR - 2022-11-29 21:50:16 --> Array
+(
+    [cryptocurrencyapi.net] => 2
+    [currency] => DASH
+    [type] => in
+    [date] => 1669747273
+    [address] => XwVTiTLGvrF7cHkxZAWKryks1DswiiVXoC
+    [amount] => 0.23408200
+    [txid] => 9541d6566e8a08ed3d5394cabe17e7288db09487b1318838826bbef7586cfbd7
+    [pos] => 0
+    [confirmations] => 6
+    [tag] => 1266569849
+    [transferid] => 15325
+    [sign] => a9c32cd3c5cc85678f34f19088bd19c78fadc2a7
+    [sign2] => 7815ddd41b27e1ed450bbcf103e9dfc10ce648f2
+)
+
+ERROR - 2022-11-29 21:50:16 --> поступление оплаты
+ERROR - 2022-11-29 21:50:16 --> Array
+(
+    [txid] => 9541d6566e8a08ed3d5394cabe17e7288db09487b1318838826bbef7586cfbd7
+    [value] => 0.234082
+    [id_order] => 1266569849
+    [currency] => DASH
+)
+
+ERROR - 2022-11-29 21:50:16 --> Заказ уже оплачен №1266569849
